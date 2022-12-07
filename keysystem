@@ -1,7 +1,0 @@
-local folder = Instance.new("Folder")
-folder.Name = "GGHub"
-folder.Parent = game.Players.LocalPlayer
-local key = Instance.new("StringValue")
-key.Name = "player_key"
-key.Parent = folder
-key.Value = "n9J5LznXY"
