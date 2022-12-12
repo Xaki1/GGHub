@@ -1,0 +1,23 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
+
+local Window = Library.CreateLib("GGHub", "RJTheme3")
+
+local Tab = Window:NewTab("Main")
+
+local Section = Tab:NewSection("Fun")
+
+Section:NewButton("Best items", "Gives all best items", function()
+    for i = 1,200 do
+local Event = game:GetService("ReplicatedStorage").SpawnRainbowBlock
+Event:FireServer()
+wait(0.1)
+end
+
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+    if v:FindFirstChildOfClass("Part") then
+        v.Parent = game.Players.LocalPlayer.Character
+        wait()
+        v.Parent = workspace
+    end
+end
+end)
